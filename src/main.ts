@@ -4,7 +4,9 @@ const generarNumeroAleatorio = () : number => Math.floor(Math.random() * 100);
 
 let historialNumeros : string = "Historial:";
 
-const numeroParaAcertar : number = generarNumeroAleatorio();
+let numeroParaAcertar : number = generarNumeroAleatorio();
+
+
 
 let totalPartidas : number = 1;
 
@@ -197,6 +199,7 @@ const resetMensaje = () => {
 };
 
 const comenzarNuevaPartida = () => {
+  numeroParaAcertar = generarNumeroAleatorio();
   sumarPartida();
   pintarCantidadDePartidas();
   intentos = 1;
