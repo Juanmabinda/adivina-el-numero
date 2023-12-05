@@ -25,16 +25,16 @@ const muestraMensajeDeComprobacion = (texto : string, estado: Estado) => {
       mensaje = `🤨 ${texto} no es un número, intentá nuevamente`;
       break;
     case "EL_NUMERO_SECRETO_ES_MENOR":
-      mensaje = "❌ INTENTÁ CON UN NÚMERO MENOR ⬇️";
+      mensaje = "❌ INTENTÁ CON UNO MENOR ⬇️";
       break;
     case "EL_NUMERO_SECRETO_ES_MAYOR":
-      mensaje = "❌ INTENTÁ CON UN NÚMERO MAYOR ⬆️ ";
+      mensaje = "❌ INTENTÁ CON UNO MAYOR ⬆️ ";
       break;
     case "ES_EL_NUMERO_SECRETO":
-      mensaje = `✅ FELICITACIONES, ADIVINASTE! 🎉🎉🎉🎊 El NÚMERO ERA: ${texto}`;
+      mensaje = `✅ ADIVINASTE! 🎉🎉🎉🎊 El NÚMERO ERA: ${texto}`;
       break;
     case "GAME_OVER":
-      mensaje =  `⛔ Alcanzaste el número máximo de intentos, el número era: ${numeroParaAcertar}.`;
+      mensaje =  `⛔ Máximo de intentos. El número era: ${numeroParaAcertar}.`;
       deshabilitarBotonComprobar();
       break;
     default:
