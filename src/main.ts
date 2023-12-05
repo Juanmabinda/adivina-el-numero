@@ -171,6 +171,7 @@ const resetHistorial = () => {
   if (historialElemento) {
     historialElemento.innerHTML = "";
   };
+  historialNumeros = "Historial:";
 };
 
 const resetMensaje = () => {
