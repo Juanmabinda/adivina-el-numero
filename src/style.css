@@ -122,3 +122,7 @@ input {
 div {
   margin-top: 15px;
 }
+
+#cantidad-partidas {
+  margin-bottom: 10px;
+};

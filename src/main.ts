@@ -6,6 +6,7 @@ let historialNumeros : string = "Historial:";
 
 const numeroParaAcertar : number = generarNumeroAleatorio();
 
+let totalPartidas : number = 1;
 
 type Estado =
   | "NO_ES_UN_NUMERO"
@@ -166,6 +167,20 @@ const handleCompruebaClick = () => {
   };
 };
 
+const sumarPartida = () => {
+  totalPartidas++;
+};
+
+const pintarCantidadDePartidas = () => {
+  const cantidadPartidasElemento = document.getElementById("cantidad-partidas");
+
+  if (cantidadPartidasElemento) {
+    cantidadPartidasElemento.innerHTML = `Cantidad De Partidas: ${totalPartidas}`;
+  };
+
+};
+
+
 const resetHistorial = () => {
   const historialElemento : HTMLElement | null = document.getElementById("historial");
   if (historialElemento) {
@@ -182,6 +197,8 @@ const resetMensaje = () => {
 };
 
 const comenzarNuevaPartida = () => {
+  sumarPartida();
+  pintarCantidadDePartidas();
   intentos = 1;
   muestraCantidadDeIntentos(intentos);
   habilitarBotonComprobar();
