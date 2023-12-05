@@ -5,7 +5,6 @@ const generarNumeroAleatorio = () : number => Math.floor(Math.random() * 100);
 let historialNumeros : string = "Historial:";
 
 const numeroParaAcertar : number = generarNumeroAleatorio();
-console.log(numeroParaAcertar);
 
 
 type Estado =
