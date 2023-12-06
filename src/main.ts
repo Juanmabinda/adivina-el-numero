@@ -1,5 +1,20 @@
 import "./style.css";
 
+
+const eventos = () => {
+  const boton = document.getElementById("comprobar");
+  if (boton) {
+    boton.addEventListener("click", handleCompruebaClick);
+  };
+
+  const botonNuevaPartida = document.getElementById("nueva-partida");
+  if (botonNuevaPartida) {
+    botonNuevaPartida.addEventListener("click", comenzarNuevaPartida);
+  };
+};
+
+document.addEventListener("DOMContentLoaded", eventos);
+
 const generarNumeroAleatorio = () : number => Math.floor(Math.random() * 100);
 
 let historialNumeros : string = "Historial:";
@@ -207,14 +222,4 @@ const comenzarNuevaPartida = () => {
   habilitarBotonComprobar();
   resetHistorial();
   resetMensaje();
-};
-
-const boton = document.getElementById("comprobar");
-if (boton) {
-  boton.addEventListener("click", handleCompruebaClick);
-};
-
-const botonNuevaPartida = document.getElementById("nueva-partida");
-if (botonNuevaPartida) {
-  botonNuevaPartida.addEventListener("click", comenzarNuevaPartida);
 };
