@@ -202,7 +202,7 @@ const comenzarNuevaPartida = () => {
   numeroParaAcertar = generarNumeroAleatorio();
   sumarPartida();
   pintarCantidadDePartidas();
-  intentos = 1;
+  intentos = 0;
   muestraCantidadDeIntentos(intentos);
   habilitarBotonComprobar();
   resetHistorial();
